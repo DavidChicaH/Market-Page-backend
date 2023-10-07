@@ -12,3 +12,4 @@ logs
 results
 build
 node_modules
+.env
