@@ -2,14 +2,14 @@ import mongoose from "mongoose";
 import "dotenv/config";
 
 const connectDB = async () => {
-  const mongoUri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWD}@fakestoredb.hoo2swe.mongodb.net/?retryWrites=true&w=majority&appName=FakeStoreDB`;
+  const mongoUri = `mongodb+srv://davidchikhb:${process.env.MONGO_PASSWORD}@fakestoredb.hoo2swe.mongodb.net/?retryWrites=true&w=majority&appName=FakeStoreDB`;
 
   try {
     await mongoose.connect(mongoUri);
-    console.log("Connected to the database");
+    console.log("Connected to MongoDB");
   } catch (error) {
-    console.error(`Error: ${error.message}`);
+    console.log(error);
   }
 };
 
-export default connectDB ;
+export default connectDB;
